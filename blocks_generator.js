@@ -1,8 +1,6 @@
-TAB = "  "
+const TAB = "  "
 
 Blockly.Python["text_test"] = function(block){
-    //Blockly.Python.valueToCode(block, 'DO');
-    //block.getFieldValue('END')
     return "print('Hello World')\n";
 }
 
@@ -36,20 +34,3 @@ Blockly.Python["activation_relu"] = function(block){
     let code = "nn.ReLU()\n"
     return code
 }
-
-
-testestest={}
-testestest['controls_whileUntil'] = function(block) {
-    // Do while/until loop.
-    const until = block.getFieldValue('MODE') === 'UNTIL';
-    let argument0 = Python.valueToCode(
-                        block, 'BOOL',
-                        until ? Python.ORDER_LOGICAL_NOT : Python.ORDER_NONE) ||
-        'False';
-    let branch = Python.statementToCode(block, 'DO');
-    branch = Python.addLoopTrap(branch, block) || Python.PASS;
-    if (until) {
-      argument0 = 'not ' + argument0;
-    }
-    return 'while ' + argument0 + ':\n' + branch;
-  };

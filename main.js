@@ -6,7 +6,7 @@
 
 
 
-var toolbox = {
+let toolbox = {
     "kind": "categoryToolbox",
     "contents": [
       {
@@ -99,7 +99,7 @@ var toolbox = {
 }
 
 
-var workspace = Blockly.inject('blocklyDiv', {
+let workspace = Blockly.inject('blocklyDiv', {
   toolbox: toolbox,
   move: {
     scrollbars: true,
