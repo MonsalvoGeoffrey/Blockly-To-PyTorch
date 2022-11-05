@@ -92,6 +92,10 @@ let toolbox = {
             "kind": "block",
             "type": "activation_relu"
           },
+          {
+            "kind": "block",
+            "type": "activation_leaky_relu"
+          },
         ]
       },
 

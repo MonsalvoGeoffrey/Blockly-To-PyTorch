@@ -43,3 +43,9 @@ Blockly.Python["activation_relu"] = function(block){
     let code = "nn.ReLU()\n"
     return code
 }
+
+Blockly.Python["activation_leaky_relu"] = function(block){
+    let slope = block.getFieldValue("Neg Slope")
+    let code = "nn.LeakyReLU(negative_slope="+slope+")\n"
+    return code
+}

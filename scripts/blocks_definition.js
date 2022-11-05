@@ -39,3 +39,13 @@ Blockly.Blocks["activation_relu"] = {
     }
 }
 
+Blockly.Blocks["activation_leaky_relu"] = {
+    init: function() {
+        this.setPreviousStatement(true)
+        this.setNextStatement(true)
+        this.setColour(BLOCK_COLORS.ACTIVATION)
+        this.appendDummyInput().appendField("Leaky ReLU")
+        .appendField("Negative Slope").appendField(new Blockly.FieldNumber(0.01),"Neg Slope")
+    }
+}
+
