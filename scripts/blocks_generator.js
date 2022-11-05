@@ -1,5 +1,13 @@
 const TAB = "  "
 
+function pythonBool(input){
+    if (input == "true" || input == "TRUE" || input == true) {
+        return "True"
+    } else {
+        return "False"
+    }
+}
+
 Blockly.Python["text_test"] = function(block){
     return "print('Hello World')\n";
 }
@@ -26,7 +34,8 @@ Blockly.Python["model_define"] = function(block){
 Blockly.Python["layer_linear"] = function(block){
     let input = block.getFieldValue("Input")
     let output = block.getFieldValue("Output")
-    let code = "nn.Linear("+input+", "+output+")\n"
+    let bias = block.getFieldValue("Bias")
+    let code = "nn.Linear(in_features="+input+", out_features="+output+", bias="+pythonBool(bias)+")\n"
     return code
 }
 

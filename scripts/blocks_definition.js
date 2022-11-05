@@ -22,9 +22,10 @@ Blockly.Blocks["layer_linear"] = {
         this.setPreviousStatement(true)
         this.setNextStatement(true)
         this.setColour(BLOCK_COLORS.LAYER)
-        this.appendDummyInput().appendField("Linear").appendField("Input")
-        .appendField(new Blockly.FieldNumber(), "Input").appendField("Output")
-        .appendField(new Blockly.FieldNumber(), "Output")
+        this.appendDummyInput().appendField("Linear")
+        .appendField("Input").appendField(new Blockly.FieldNumber(), "Input")
+        .appendField("Output").appendField(new Blockly.FieldNumber(), "Output")
+        .appendField("Bias").appendField(new Blockly.FieldCheckbox(true), "Bias")
     }
 }
 
