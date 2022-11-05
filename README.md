@@ -21,3 +21,8 @@ It is currently still in prototype stage and not ready for any practical use.
 <summary>Version 0.0.1</summary>
 - Initial prototype release
 </details>
+<details>
+<summary>Version 0.0.2</summary>
+- Add Blockly's files locally (security update)
+- Move all scripts in a scripts folder and all stylesheets in a style folder
+</details>
