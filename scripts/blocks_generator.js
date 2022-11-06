@@ -13,6 +13,7 @@ Blockly.Python["text_test"] = function(block){
 }
 
 Blockly.Python["model_define"] = function(block){
+    console.log(block)
     let name = block.getFieldValue("Name")// || "Model"
     console.log(name)
     let code = "class " + name + "(nn.Module):\n"
@@ -21,7 +22,7 @@ Blockly.Python["model_define"] = function(block){
     code += TAB + TAB + "self.layers = nn.Sequential(\n"
 
     let layers = Blockly.Python.statementToCode(block, "Model")
-    layers = layers.split("\n").join(",\n"+TAB+TAB)
+    layers = layers.split("\n").join("\n"+TAB+TAB)
     layers = TAB + TAB + layers
     console.log(layers)
 
@@ -35,7 +36,7 @@ Blockly.Python["layer_linear"] = function(block){
     let input = block.getFieldValue("Input")
     let output = block.getFieldValue("Output")
     let bias = block.getFieldValue("Bias")
-    let code = "nn.Linear(in_features="+input+", out_features="+output+", bias="+pythonBool(bias)+")\n"
+    let code = "nn.Linear(in_features="+input+", out_features="+output+", bias="+pythonBool(bias)+"), # ("+input+") -> ("+output+")\n"
     return code
 }
 
