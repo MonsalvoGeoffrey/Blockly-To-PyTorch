@@ -99,6 +99,18 @@ let toolbox = {
         ]
       },
 
+      {
+        "kind": "category",
+        "name": "Regularisation",
+        "colour": String(BLOCK_COLORS.REGULARISATION),
+        "contents": [
+          {
+            "kind": "block",
+            "type": "regularisation_dropout"
+          },
+        ]
+      },
+
     ]
 }
 
