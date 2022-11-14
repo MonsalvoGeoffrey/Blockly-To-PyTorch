@@ -1,4 +1,24 @@
 {
     "editor.tabCompletion": "on",
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#cf6979",
+        "activityBar.background": "#cf6979",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#93d886",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#cf6979",
+        "statusBar.background": "#c34256",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#cf6979",
+        "statusBarItem.remoteBackground": "#c34256",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#c34256",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#c3425699",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#c34256"
 }

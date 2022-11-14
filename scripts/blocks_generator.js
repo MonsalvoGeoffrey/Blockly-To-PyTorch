@@ -13,7 +13,16 @@ Blockly.Python["text_test"] = function(block){
 }
 
 Blockly.Python["model_define"] = function(block){
-    console.log(block)
+    //block.childBlocks_
+    let model_blocks =  block.getInputTargetBlock('Model');
+
+    do{
+        if (!model_blocks) break;
+        console.log(model_blocks.type);
+        // TODO: USE PLACEHOLDER TO MAKE TENSOR SHAPE SAFER
+    } while (model_blocks = model_blocks.getNextBlock())
+
+
     let name = block.getFieldValue("Name")// || "Model"
     console.log(name)
     let code = "class " + name + "(nn.Module):\n"
@@ -48,5 +57,11 @@ Blockly.Python["activation_relu"] = function(block){
 Blockly.Python["activation_leaky_relu"] = function(block){
     let slope = block.getFieldValue("Neg Slope")
     let code = "nn.LeakyReLU(negative_slope="+slope+")\n"
+    return code
+}
+
+Blockly.Python["regularisation_dropout"] = function(block){
+    let probability = block.getFieldValue("Probability")
+    let code = "nn.Dropout(p="+probability+")\n"
     return code
 }

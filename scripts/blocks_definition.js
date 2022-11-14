@@ -52,3 +52,13 @@ Blockly.Blocks["activation_leaky_relu"] = {
     }
 }
 
+Blockly.Blocks["regularisation_dropout"] = {
+    init: function() {
+        this.setPreviousStatement(true)
+        this.setNextStatement(true)
+        this.setColour(BLOCK_COLORS.REGULARISATION)
+        this.appendDummyInput().appendField("Dropout")
+        .appendField("Probability").appendField(new Blockly.FieldNumber(0.5),"Probability")
+    }
+}
+
